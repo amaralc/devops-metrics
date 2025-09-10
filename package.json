@@ -2,10 +2,27 @@
   "name": "devops-metrics",
   "version": "0.1.0",
   "private": true,
+  "workspaces": [
+    "apps/*"
+  ],
   "scripts": {
-  },
-  "dependencies": {
+    "dev": "pnpm --filter devops-dashboard dev",
+    "build": "pnpm --filter devops-dashboard build",
+    "start": "pnpm --filter devops-dashboard start",
+    "lint": "pnpm --filter devops-dashboard lint",
+    "type-check": "pnpm --filter devops-dashboard type-check",
+    "test": "pnpm --filter devops-dashboard test",
+    "test:watch": "pnpm --filter devops-dashboard test:watch",
+    "install-all": "pnpm install",
+    "clean": "pnpm --filter devops-dashboard clean"
   },
   "devDependencies": {
-  }
+    "prettier": "^3.2.0",
+    "prettier-plugin-tailwindcss": "^0.5.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  },
+  "packageManager": "pnpm@8.15.0"
 }
